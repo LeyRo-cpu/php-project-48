@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Hexlet\\Code\\Tests\\DifferTest::testGenDiff":7},"times":{"Hexlet\\Code\\Tests\\DifferTest::testGenDiff":0.001,"Hexlet\\Code\\Tests\\DifferTest::testGenDiffWithSameFiles":0,"Hexlet\\Code\\Tests\\DifferTest::testGenDiffWithNonExistentFile":0}}

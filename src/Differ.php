@@ -56,4 +56,4 @@ class Differ
         }
         return (string) $value;
     }
-} 
+}

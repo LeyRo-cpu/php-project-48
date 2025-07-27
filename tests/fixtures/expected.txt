@@ -1,0 +1,12 @@
+
+Deprecated: Funct\Collection\every(): Implicitly marking parameter $callback as nullable is deprecated, the explicit nullable type must be used instead in /Users/ley11/Sites/php-project-48/vendor/funct/funct/src/Collection.php on line 59
+
+Deprecated: Funct\Collection\some(): Implicitly marking parameter $callback as nullable is deprecated, the explicit nullable type must be used instead in /Users/ley11/Sites/php-project-48/vendor/funct/funct/src/Collection.php on line 521
+{
+  - follow: false
+    host: hexlet.io
+  - proxy: 123.234.53.22
+  - timeout: 50
+  + timeout: 20
+  + verbose: true
+}
