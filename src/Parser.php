@@ -2,6 +2,8 @@
 
 namespace Hexlet\Code;
 
+use Hexlet\Code\Parsers\ParserFactory;
+
 class Parser
 {
     public static function parseFile(string $filePath): object
@@ -15,12 +17,8 @@ class Parser
             throw new \Exception("Cannot read file: $filePath");
         }
 
-        $data = json_decode($fileContent);
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            throw new \Exception("Invalid JSON in file: $filePath");
-        }
-
-        return $data;
+        $parser = ParserFactory::create($filePath);
+        return $parser->parse($fileContent);
     }
 
     public static function printParsedData(object $data, string $fileName): void

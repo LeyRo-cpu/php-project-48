@@ -22,7 +22,14 @@ composer install
 ### CLI Usage
 
 ```bash
+# Compare JSON files
 ./gendiff file1.json file2.json
+
+# Compare YAML files
+./gendiff file1.yml file2.yml
+
+# Compare mixed formats
+./gendiff file1.json file2.yml
 ```
 
 ### Library Usage
@@ -32,7 +39,15 @@ composer install
 
 use Hexlet\Code\Differ;
 
+// Compare JSON files
 $diff = Differ::genDiff('file1.json', 'file2.json');
+
+// Compare YAML files
+$diff = Differ::genDiff('file1.yml', 'file2.yml');
+
+// Compare mixed formats
+$diff = Differ::genDiff('file1.json', 'file2.yml');
+
 echo $diff;
 ```
 
