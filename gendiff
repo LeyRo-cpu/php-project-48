@@ -11,10 +11,12 @@ Generate diff
 Usage:
   gendiff (-h|--help)
   gendiff (-v|--version)
+  gendiff [--format <fmt>] <firstFile> <secondFile>
 
 Options:
   -h --help                     Show this screen
   -v --version                  Show version
+  --format <fmt>                Report format [default: stylish]
 DOCOPT;
 
 $handler = new Handler();
@@ -27,5 +29,16 @@ if (isset($args['--help']) && $args['--help'] || isset($args['-h']) && $args['-h
 
 if (isset($args['--version']) && $args['--version'] || isset($args['-v']) && $args['-v']) {
     echo "gendiff version 1.0.0\n";
+    exit(0);
+}
+
+// Обработка основных аргументов
+if (isset($args['<firstFile>']) && isset($args['<secondFile>'])) {
+    $firstFile = $args['<firstFile>'];
+    $secondFile = $args['<secondFile>'];
+    $format = isset($args['--format']) ? $args['--format'] : 'stylish';
+    
+    // TODO: Здесь будет логика сравнения файлов
+    echo "Comparing files: $firstFile and $secondFile with format: $format\n";
     exit(0);
 } 
