@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Docopt\Handler;
+
+$doc = <<<'DOCOPT'
+Generate diff
+
+Usage:
+  gendiff (-h|--help)
+  gendiff (-v|--version)
+
+Options:
+  -h --help                     Show this screen
+  -v --version                  Show version
+DOCOPT;
+
+$handler = new Handler();
+$args = $handler->handle($doc);
+
+if (isset($args['--help']) && $args['--help'] || isset($args['-h']) && $args['-h']) {
+    echo $doc;
+    exit(0);
+}
+
+if (isset($args['--version']) && $args['--version'] || isset($args['-v']) && $args['-v']) {
+    echo "gendiff version 1.0.0\n";
+    exit(0);
+} 
