@@ -4,6 +4,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 use Docopt\Handler;
+use Hexlet\Code\Parser;
 
 $doc = <<<'DOCOPT'
 Generate diff
@@ -38,7 +39,21 @@ if (isset($args['<firstFile>']) && isset($args['<secondFile>'])) {
     $secondFile = $args['<secondFile>'];
     $format = isset($args['--format']) ? $args['--format'] : 'stylish';
     
-    // TODO: Здесь будет логика сравнения файлов
-    echo "Comparing files: $firstFile and $secondFile with format: $format\n";
+    try {
+        // Парсим первый файл
+        $firstData = Parser::parseFile($firstFile);
+        Parser::printParsedData($firstData, $firstFile);
+        
+        // Парсим второй файл
+        $secondData = Parser::parseFile($secondFile);
+        Parser::printParsedData($secondData, $secondFile);
+        
+        echo "Format: $format\n";
+        
+    } catch (\Exception $e) {
+        echo "Error: " . $e->getMessage() . "\n";
+        exit(1);
+    }
+    
     exit(0);
 } 
