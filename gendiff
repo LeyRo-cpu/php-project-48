@@ -40,7 +40,7 @@ if (isset($args['<firstFile>']) && isset($args['<secondFile>'])) {
     $format = isset($args['--format']) ? $args['--format'] : 'stylish';
     
     try {
-        $diff = Differ::genDiff($firstFile, $secondFile);
+        $diff = Differ::genDiff($firstFile, $secondFile, $format);
         echo $diff . "\n";
         
     } catch (\Exception $e) {
