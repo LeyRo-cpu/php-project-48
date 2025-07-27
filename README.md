@@ -6,10 +6,11 @@
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=LeyRo-cpu_php-project-48&metric=coverage)](https://sonarcloud.io/summary/new_code?id=LeyRo-cpu_php-project-48)
 [![Reliability](https://sonarcloud.io/api/project_badges/measure?project=LeyRo-cpu_php-project-48&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=LeyRo-cpu_php-project-48)
 [![Security](https://sonarcloud.io/api/project_badges/measure?project=LeyRo-cpu_php-project-48&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=LeyRo-cpu_php-project-48)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/quality_gate?project=LeyRo-cpu_php-project-48)](https://sonarcloud.io/summary/new_code?id=LeyRo-cpu_php-project-48)
 
 ## Description
 
-A CLI utility for generating diffs between JSON files.
+A CLI utility for generating diffs between JSON and YAML files with support for nested structures.
 
 ## Installation
 
